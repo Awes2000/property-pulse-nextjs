@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-family-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono);
+}
+
+@utility grid-cols-7030 {
+  grid-template-columns: 70% 28%;
+}
