@@ -1,0 +1,7 @@
+{
+  "buildCommand": "cd property-pulse-nextjs && npm run build",
+  "devCommand": "cd property-pulse-nextjs && npm run dev",
+  "installCommand": "cd property-pulse-nextjs && npm install",
+  "framework": "nextjs",
+  "outputDirectory": "property-pulse-nextjs/.next"
+}
