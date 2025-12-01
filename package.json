@@ -1,0 +1,8 @@
+{
+  "name": "property-pulse-root",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "property-pulse-nextjs"
+  ]
+}
