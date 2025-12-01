@@ -1,5 +1,15 @@
 {
-  "installCommand": "cd property-pulse-nextjs && npm install",
-  "buildCommand": "cd property-pulse-nextjs && npm run build",
-  "outputDirectory": "property-pulse-nextjs/.next"
+  "version": 2,
+  "builds": [
+    {
+      "src": "property-pulse-nextjs/package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "property-pulse-nextjs/$1"
+    }
+  ]
 }
