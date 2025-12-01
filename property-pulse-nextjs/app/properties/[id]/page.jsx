@@ -1,7 +1,9 @@
 import PropertyHeaderImage from "@/components/PropertyHeaderImage";
 import PropertyDetails from "@/components/PropertyDetails";
+import PropertyImages from "@/components/PropertyImages";
 import BookmarkButton from "@/components/BookmarkButton";
 import ShareButtons from "@/components/ShareButtons";
+import PropertyContactForm from "@/components/PropertyContactForm";
 import connectDB from "@/config/database";
 import Property from "@/models/Property";
 import Link from "next/link";
@@ -24,6 +26,7 @@ const PropertyPage = async ({params}) => {
     return (
         <>
             <PropertyHeaderImage image={property.images[0]} />
+            <PropertyImages images={property.images} />
             <section>
                 <div className="container m-auto py-6 px-6">
                     <Link
@@ -45,6 +48,7 @@ const PropertyPage = async ({params}) => {
                         <aside className="space-y-4">
                             <BookmarkButton property={propertyObj} />
                             <ShareButtons property={propertyObj} />
+                            <PropertyContactForm property={propertyObj} />
                         </aside>
                     </div>
                 </div>

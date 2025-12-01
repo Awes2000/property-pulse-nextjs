@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import AuthProvider from '@/components/AuthProvider';
 import Navbar from '@/components/Navbar';
 import { ToastContainer } from 'react-toastify';
+import { GlobalProvider } from '@/context/GlobalContext';
 
 export const metadata = {
     title: 'Property Pulse',
@@ -14,14 +15,16 @@ export const metadata = {
 const MainLayout = ({children}) => {
     return (
         <AuthProvider>
-            <html lang="en">
-                <body>
-                    <Navbar/>
-                    <main>{children}</main>
-                    <Footer/>
-                    <ToastContainer />
-                </body>
-            </html>
+            <GlobalProvider>
+                <html lang="en">
+                    <body>
+                        <Navbar/>
+                        <main>{children}</main>
+                        <Footer/>
+                        <ToastContainer />
+                    </body>
+                </html>
+            </GlobalProvider>
         </AuthProvider>
     );
 }

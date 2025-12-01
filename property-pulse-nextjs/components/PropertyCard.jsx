@@ -20,15 +20,17 @@ const PropertyCard = ({property, priority = false}) => {
         : `/properties/${property.images[0]}`;
 
     return ( <div className="rounded-xl shadow-md relative flex flex-col h-full">
-            <Image
-              src={imageUrl}
-              alt=""
-              height={0}
-              width={0}
-              sizes="100vw"
-              className="w-full h-auto rounded-t-xl"
-              priority={priority}
-            />
+            <Link href={`/properties/${property._id}`}>
+              <Image
+                src={imageUrl}
+                alt=""
+                height={0}
+                width={0}
+                sizes="100vw"
+                className="w-full h-auto rounded-t-xl"
+                priority={priority}
+              />
+            </Link>
             <div className="p-4 flex-grow flex flex-col">
               <div className="text-left md:text-center lg:text-left mb-6">
                 <div className="text-gray-600">{property.type}</div>
